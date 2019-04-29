@@ -4,14 +4,14 @@ def badge_maker(name)
   "Hello, my name is #{name}."
 end
 
-def batch_badge_creator(speaker)
+def batch_badge_creator(attendees)
   attendees.collect do |name|
     badge_maker(name)
   end
 
 end
 
-def assign_rooms(speaker)
+def assign_rooms(attendees)
   room=0
   attendees.collect do |name|
     room+=1
@@ -19,7 +19,7 @@ def assign_rooms(speaker)
   end
 end
 
-def printer(speaker)
+def printer(attendees)
   batch_badge_creator(attendees).each do |value|
     puts value
   end
